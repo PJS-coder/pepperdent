@@ -9,6 +9,16 @@ html-css-js/
 ├── index.html          # Main HTML file with all sections
 ├── styles.css          # Complete styling (mobile-first responsive)
 ├── script.js           # JavaScript for interactivity
+├── images/             # All image assets
+│   ├── pepperdent-logo.png
+│   ├── girl.png
+│   ├── favicon.ico
+│   ├── dentist.jpg
+│   ├── patient-1.jpg
+│   ├── patient-2.jpg
+│   ├── patient-3.jpg
+│   ├── teeth-comparison.jpg
+│   └── teeth-comparison-before.jpg
 └── README.md           # This file
 ```
 
@@ -56,12 +66,14 @@ html-css-js/
 
 ## 📸 Image Paths
 
-The HTML references images from the parent directories:
-- Logo: `../public/pepperdent-logo.png`
-- Hero image: `../public/girl.png`
-- Assets: `../src/assets/` (dentist, patients, teeth comparison images)
+All images are now in the `images/` folder within html-css-js:
+- Logo: `images/pepperdent-logo.png`
+- Hero image: `images/girl.png`
+- Dentist photo: `images/dentist.jpg`
+- Patient photos: `images/patient-1.jpg`, `patient-2.jpg`, `patient-3.jpg`
+- Teeth comparison: `images/teeth-comparison.jpg`, `teeth-comparison-before.jpg`
 
-Make sure these paths are accessible from the html-css-js folder.
+**The project is now completely self-contained and portable!**
 
 ## 🎨 Styling
 
