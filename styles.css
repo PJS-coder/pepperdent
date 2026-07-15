@@ -240,15 +240,15 @@ ul {
     display: flex;
     align-items: center;
     min-height: calc(100vh - 80px);
-    height: calc(100vh - 80px);
     background-color: rgba(241, 245, 249, 0.5);
     padding: 1.5rem 0;
-    overflow: hidden;
+    overflow: visible;
 }
 
 @media (min-width: 1024px) {
     .hero {
         height: calc(100vh - 80px);
+        overflow: hidden;
     }
 }
 
@@ -260,7 +260,12 @@ ul {
     grid-template-columns: 1fr;
     align-items: center;
     gap: 1.5rem;
-    height: 100%;
+}
+
+@media (min-width: 1024px) {
+    .hero-container {
+        height: 100%;
+    }
 }
 
 @media (min-width: 1440px) {
