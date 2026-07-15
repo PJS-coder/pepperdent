@@ -37,6 +37,10 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    /* Performance optimizations */
+    content-visibility: auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 button {
