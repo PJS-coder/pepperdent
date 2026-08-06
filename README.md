@@ -9,16 +9,15 @@ html-css-js/
 ├── index.html          # Main HTML file with all sections
 ├── styles.css          # Complete styling (mobile-first responsive)
 ├── script.js           # JavaScript for interactivity
-├── images/             # All image assets
-│   ├── pepperdent-logo.png
-│   ├── girl.png
-│   ├── favicon.ico
-│   ├── dentist.jpg
-│   ├── patient-1.jpg
-│   ├── patient-2.jpg
-│   ├── patient-3.jpg
-│   ├── teeth-comparison.jpg
-│   └── teeth-comparison-before.jpg
+├── images/             # All optimized image assets (.webp / .png)
+│   ├── pepperdent-logo.webp
+│   ├── girl.webp
+│   ├── favicon.png
+│   ├── teeth-comparison.webp
+│   ├── teeth-comparison-before.webp
+│   ├── dr-aanchal-gupta.webp
+│   ├── digital-dentistry-tech.webp
+│   └── [service-name].webp (and other content images)
 └── README.md           # This file
 ```
 
@@ -67,11 +66,11 @@ html-css-js/
 ## 📸 Image Paths
 
 All images are now in the `images/` folder within html-css-js:
-- Logo: `images/pepperdent-logo.png`
-- Hero image: `images/girl.png`
-- Dentist photo: `images/dentist.jpg`
-- Patient photos: `images/patient-1.jpg`, `patient-2.jpg`, `patient-3.jpg`
-- Teeth comparison: `images/teeth-comparison.jpg`, `teeth-comparison-before.jpg`
+- Logo: `images/pepperdent-logo.webp`
+- Hero image: `images/girl.webp`
+- Team/Dentist: `images/dr-aanchal-gupta.webp`
+- Patient photos: `images/patient-1.webp`, `patient-2.webp`, `patient-3.webp`
+- Teeth comparison: `images/teeth-comparison.webp`, `teeth-comparison-before.webp`
 
 **The project is now completely self-contained and portable!**
 
