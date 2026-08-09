@@ -4828,9 +4828,114 @@ html {
 }
 
 @media (max-width: 768px) {
+    .native-reviews-slider {
+        gap: 0.85rem;
+        padding: 0.5rem 0.25rem 1rem;
+    }
+
     .native-reviews-slider .review-card {
-        flex: 0 0 290px;
-        padding: 1.35rem;
+        flex: 0 0 240px;
+        padding: 1rem 1.05rem;
+        border-radius: 1rem;
+    }
+
+    .review-card-header {
+        gap: 0.6rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .reviewer-avatar,
+    .reviewer-user-img {
+        width: 2.1rem;
+        height: 2.1rem;
+    }
+
+    .reviewer-avatar {
+        font-size: 0.95rem;
+    }
+
+    .reviewer-name {
+        font-size: 0.85rem;
+    }
+
+    .verified-badge,
+    .review-date {
+        font-size: 0.68rem;
+    }
+
+    .google-review-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .review-rating {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .review-text {
+        font-size: 0.8rem;
+        line-height: 1.45;
+    }
+
+    .slider-side-btn {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .slider-side-btn.prev-btn {
+        left: -0.6rem;
+    }
+
+    .slider-side-btn.next-btn {
+        right: -0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .native-reviews-slider .review-card {
+        flex: 0 0 215px;
+        padding: 0.85rem 0.95rem;
+        border-radius: 0.85rem;
+    }
+
+    .review-card-header {
+        gap: 0.5rem;
+        margin-bottom: 0.45rem;
+    }
+
+    .reviewer-avatar,
+    .reviewer-user-img {
+        width: 1.85rem;
+        height: 1.85rem;
+    }
+
+    .reviewer-avatar {
+        font-size: 0.85rem;
+    }
+
+    .reviewer-name {
+        font-size: 0.82rem;
+    }
+
+    .verified-badge,
+    .review-date {
+        font-size: 0.65rem;
+    }
+
+    .google-review-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .review-rating {
+        font-size: 0.82rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .review-text {
+        font-size: 0.76rem;
+        line-height: 1.4;
     }
 }
 
