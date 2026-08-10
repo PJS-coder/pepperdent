@@ -621,13 +621,13 @@ ul {
         justify-content: center;
         align-items: center;
         order: 1;
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.65rem;
         width: 100%;
         height: auto;
-        min-height: 270px;
+        min-height: 235px;
     }
     .girl-img {
-        max-height: 360px !important;
+        max-height: 290px !important;
         width: auto;
         height: auto;
         object-fit: contain;
@@ -636,8 +636,8 @@ ul {
         left: 50% !important;
         top: 50% !important;
         transform: translate(-50%, -50%) !important;
-        height: 230px !important;
-        width: 230px !important;
+        height: 205px !important;
+        width: 205px !important;
     }
     .dot-pattern {
         display: block;
@@ -730,6 +730,16 @@ ul {
 }
 
 @media (max-width: 479px) {
+    .hero-image {
+        min-height: 220px;
+    }
+    .girl-img {
+        max-height: 270px !important;
+    }
+    .bg-circle {
+        height: 190px !important;
+        width: 190px !important;
+    }
     .hero-rating {
         font-size: 0.725rem !important;
         gap: 0.25rem 0.35rem;
@@ -748,15 +758,15 @@ ul {
 
 @media (min-width: 480px) and (max-width: 1023px) {
     .hero-image {
-        min-height: 310px;
-        margin-bottom: 1rem;
+        min-height: 260px;
+        margin-bottom: 0.85rem;
     }
     .girl-img {
-        max-height: 350px !important;
+        max-height: 310px !important;
     }
     .bg-circle {
-        height: 260px !important;
-        width: 260px !important;
+        height: 220px !important;
+        width: 220px !important;
     }
     .hero-title {
         font-size: clamp(2.85rem, 7.5vw, 4rem) !important;
