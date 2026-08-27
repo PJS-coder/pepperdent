@@ -72,8 +72,8 @@ body {
 }
 
 .section-padding {
-  padding-top: 5.5rem;
-  padding-bottom: 5.5rem;
+  padding-top: 3.25rem;
+  padding-bottom: 3.25rem;
 }
 
 /* Section Titles */
@@ -109,8 +109,8 @@ body {
    SECTION 1: HERO WITH TEXT ON LEFT AND IMAGE + ADDRESS ON RIGHT
    ================================================== */
 .split-hero-section {
-  padding-top: 5rem;
-  padding-bottom: 5.5rem;
+  padding-top: 2.75rem;
+  padding-bottom: 3.25rem;
   background-color: var(--color-bg-warm);
   border-bottom: 1px solid var(--color-border);
 }
@@ -516,15 +516,10 @@ body {
 }
 
 .clinic-panel-card {
-  background-color: var(--color-bg-warm);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 3.5rem;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 3.5rem;
   align-items: center;
-  box-shadow: var(--shadow-md);
 }
 
 .panel-info-rows {
@@ -822,11 +817,7 @@ body {
 }
 
 .areas-card-panel {
-  background-color: #ffffff;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 4rem 3.5rem;
-  box-shadow: var(--shadow-md);
+  width: 100%;
 }
 
 .areas-tags-list {
@@ -1018,16 +1009,10 @@ body {
 }
 
 .final-cta-card-panel {
-  background-color: #ffffff;
-  border: 1px solid var(--color-border);
-  border-radius: 24px;
-  padding: 2.75rem 2.25rem;
   color: var(--color-text-body);
   text-align: center;
   position: relative;
-  overflow: hidden;
-  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06);
-  max-width: 920px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
@@ -1305,32 +1290,44 @@ body {
     padding-right: 1.25rem;
   }
 
-  .editorial-hero {
-    padding-top: 1.25rem;
-    padding-bottom: 3rem;
+  .section-padding {
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
   }
 
-  .hero-bg-media {
-    height: 260px;
-    border-radius: 20px;
-    margin-bottom: -2rem;
+  /* Hero Section Mobile */
+  .split-hero-section {
+    padding-top: 1rem;
+    padding-bottom: 2.25rem;
   }
 
-  .hero-floating-card {
-    padding: 1.75rem 1.25rem;
-    border-radius: 20px;
+  .kamla-text-eyebrow {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .split-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .split-hero-left {
+    align-items: center;
+    text-align: center;
   }
 
   .kamla-hero-h1 {
-    font-size: 1.75rem !important;
-    line-height: 1.25 !important;
+    font-size: clamp(1.75rem, 6.5vw, 2.25rem) !important;
+    line-height: 1.22 !important;
     margin-bottom: 1rem !important;
+    text-align: center;
   }
 
   .kamla-hero-p {
-    font-size: 0.95rem !important;
-    line-height: 1.6 !important;
-    margin-bottom: 1.5rem !important;
+    font-size: 1rem !important;
+    line-height: 1.65 !important;
+    margin-bottom: 1.75rem !important;
+    text-align: center !important;
   }
 
   .hero-cta-group {
@@ -1341,42 +1338,176 @@ body {
 
   .btn-hero {
     width: 100%;
+    justify-content: center;
+    font-size: 0.95rem;
+    padding: 0.85rem 1.25rem;
   }
 
-  .hero-trust-bar {
+  .split-hero-right {
     width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .right-hero-media-wrapper {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 16px;
+  }
+
+  .split-hero-right .simple-hero-address-card,
+  .simple-hero-address-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.15rem 1rem;
+    border-radius: 16px;
     text-align: center;
   }
 
-  .services-grid-editorial,
-  .why-features-grid,
-  .reviews-cards-grid {
+  .address-clinic-name {
+    font-size: 0.975rem;
+    justify-content: center;
+  }
+
+  .address-details {
+    font-size: 0.875rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .address-phone {
+    font-size: 0.9rem;
+    justify-content: center;
+  }
+
+  /* Info Strip Mobile */
+  .info-strip-panel {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.25rem;
+    border-radius: 18px;
+  }
+
+  .info-strip-col {
+    padding: 0.75rem 0;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .info-strip-col:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* Intro Editorial & Clinic Panel Mobile */
+  .intro-editorial-grid,
+  .clinic-panel-card {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 0;
+  }
+
+  .intro-editorial-image img,
+  .clinic-panel-image img {
+    height: 240px;
+    border-radius: 16px;
+  }
+
+  /* Services Grid Mobile */
+  .services-grid-editorial {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .portfolio-gallery-grid {
+  .service-thumb {
+    height: 190px;
+  }
+
+  /* Why Features Mobile */
+  .why-features-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 
-  .gallery-cell-hero {
-    grid-column: span 1;
-    height: 260px;
+  .why-feature-box {
+    padding: 1.35rem 1.15rem;
+    border-radius: 16px;
   }
 
-  .gallery-cell {
-    height: 200px;
+  /* Photo Gallery Marquee Mobile */
+  .gmb-photo-item {
+    width: 220px;
+    height: 150px;
+    border-radius: 14px;
   }
 
+  /* Areas We Serve Mobile */
   .areas-card-panel {
-    padding: 2.5rem 1.5rem;
+    padding: 0;
+    text-align: center;
+  }
+
+  .areas-tags-list {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .area-tag-item {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.95rem;
+  }
+
+  /* Google Reviews Section Mobile */
+  .gmb-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .gmb-score-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.85rem;
+    padding: 1.25rem 1rem;
+    border-radius: 18px;
+    width: 100%;
+  }
+
+  .native-reviews-slider-wrapper {
+    padding: 0;
+  }
+
+  .review-card {
+    min-width: 270px;
+    width: 85vw;
+    max-width: 320px;
+    padding: 1.25rem 1rem;
+    border-radius: 18px;
+  }
+
+  .slider-side-btn {
+    display: none;
+  }
+
+  /* FAQ & Final CTA Mobile */
+  .faq-question-btn {
+    font-size: 0.95rem;
+    padding: 1rem;
   }
 
   .final-cta-card-panel {
-    padding: 3.5rem 1.5rem;
-    border-radius: 24px;
+    padding: 0;
+  }
+
+  .final-cta-inner-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .final-cta-inner-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
   }
 }
