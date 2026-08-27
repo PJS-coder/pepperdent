@@ -1513,3 +1513,37 @@ body {
     margin-bottom: 1.5rem;
   }
 }
+
+/* ==================================================
+   NAVBAR & FOOTER GREEN BRAND TEAL THEME
+   ================================================== */
+.header .nav-link:hover,
+.header .nav-link.active,
+.mobile-menu .mobile-link:hover,
+.mobile-menu .mobile-link.active {
+  color: rgb(26, 123, 123) !important;
+}
+
+.header .nav-link::after {
+  background-color: rgb(26, 123, 123) !important;
+}
+
+.header .btn-primary,
+.mobile-menu .btn-primary {
+  background-color: rgb(26, 123, 123) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 20px -4px rgba(26, 123, 123, 0.25) !important;
+}
+
+.header .btn-primary:hover,
+.mobile-menu .btn-primary:hover {
+  background-color: rgb(20, 95, 95) !important;
+}
+
+.footer .footer-link:hover {
+  color: rgb(26, 123, 123) !important;
+}
+
+.footer .footer-title {
+  color: #0f172a !important;
+}
