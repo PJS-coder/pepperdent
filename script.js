@@ -132,7 +132,11 @@ function highlightNavLink() {
         path.includes('clear-aligners') ||
         path.includes('teeth-whitening') ||
         path.includes('teeth-cleaning') ||
-        path.includes('pediatric-dentistry')
+        path.includes('pediatric-dentistry') ||
+        path.includes('mouth-ulcers') ||
+        path.includes('laser-dentistry') ||
+        path.includes('wisdom-teeth') ||
+        path.includes('gum-treatment')
     ) {
         updateActiveNav('services.html');
         return;
