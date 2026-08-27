@@ -1,9 +1,9 @@
 /* Pepper Dent Dental Clinic - Service Detail Page Stylesheet */
 
 :root {
-  --color-primary: #0f172a;
-  --color-primary-glow: #1e293b;
-  --color-primary-dark: #090d16;
+  --color-primary: rgb(26, 123, 123);
+  --color-primary-glow: rgb(34, 150, 150);
+  --color-primary-dark: #0f172a;
   --color-accent: rgb(26, 123, 123);
   --color-accent-hover: rgb(20, 95, 95);
   --color-accent-light: #f0fdfa;
@@ -26,6 +26,44 @@
   --radius-md: 14px;
   --radius-lg: 24px;
   --radius-full: 9999px;
+}
+
+/* Force Brand Teal Green (#1a7b7b / rgb(26, 123, 123)) on Header Navbar & Footer */
+.header .btn-primary,
+.header .btn-desktop,
+.btn-primary {
+  background-color: rgb(26, 123, 123) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 20px -4px rgba(26, 123, 123, 0.25) !important;
+}
+
+.header .btn-primary:hover,
+.header .btn-desktop:hover,
+.btn-primary:hover {
+  background-color: rgb(20, 95, 95) !important;
+}
+
+.nav-link {
+  color: rgba(30, 41, 59, 0.85);
+}
+
+.nav-link.active {
+  color: rgb(26, 123, 123) !important;
+  font-weight: 700 !important;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  background-color: rgb(26, 123, 123) !important;
+  width: 100% !important;
+}
+
+.nav-link:hover {
+  color: rgb(26, 123, 123) !important;
+}
+
+.footer-links a:hover {
+  color: rgb(26, 123, 123) !important;
 }
 
 body {
