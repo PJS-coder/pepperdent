@@ -82,6 +82,7 @@ ul {
     justify-content: space-between;
     gap: 1rem;
     padding: 4px 2rem;
+    flex-wrap: nowrap;
 }
 
 @media (min-width: 1440px) {

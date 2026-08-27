@@ -28,7 +28,37 @@
   --radius-full: 9999px;
 }
 
-/* Force Brand Teal Green (#1a7b7b / rgb(26, 123, 123)) on Header Navbar & Footer */
+/* Base Body & Container */
+body {
+  background-color: #ffffff;
+  color: var(--color-text-body);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1540px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.section-padding {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+/* Force Brand Teal Green on Header Navbar Buttons & Active Links */
 .header .btn-primary,
 .header .btn-desktop,
 .btn-primary {
@@ -66,43 +96,14 @@
   color: rgb(26, 123, 123) !important;
 }
 
-body {
-  background-color: #ffffff;
-  color: var(--color-text-body);
-  font-family: var(--font-body);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-.container {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1540px;
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-}
-
-.section-padding {
-  padding-top: 3.25rem;
-  padding-bottom: 3.25rem;
-}
-
-/* Headings & Badges */
+/* Headings & Eyebrows */
 .section-eyebrow {
   font-family: var(--font-heading);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-accent);
+  color: rgb(26, 123, 123) !important;
   margin-bottom: 0.75rem;
   display: inline-block;
 }
@@ -111,7 +112,7 @@ body {
   font-family: var(--font-heading);
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 800;
-  color: var(--color-primary);
+  color: #0f172a !important;
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
@@ -126,8 +127,8 @@ body {
 
 /* Hero Section */
 .service-hero-section {
-  padding-top: 2.5rem;
-  padding-bottom: 3.25rem;
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
   background-color: #ffffff;
   border-bottom: 1px solid var(--color-border);
 }
@@ -139,12 +140,19 @@ body {
   align-items: center;
 }
 
+@media (max-width: 991px) {
+  .service-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
 .service-hero-h1 {
   font-family: var(--font-heading);
   font-size: clamp(2.25rem, 3.8vw, 3.25rem) !important;
   line-height: 1.15 !important;
   letter-spacing: -0.025em !important;
-  color: var(--color-primary) !important;
+  color: #0f172a !important;
   font-weight: 800 !important;
   margin-bottom: 1.25rem !important;
 }
@@ -183,29 +191,28 @@ body {
 }
 
 .btn-primary-hero {
-  background-color: var(--color-accent);
-  color: #ffffff;
+  background-color: rgb(26, 123, 123) !important;
+  color: #ffffff !important;
   box-shadow: 0 4px 20px -4px rgba(26, 123, 123, 0.3);
 }
 
 .btn-primary-hero:hover {
-  background-color: var(--color-accent-hover);
+  background-color: rgb(20, 95, 95) !important;
   transform: translateY(-2px);
 }
 
 .btn-secondary-hero {
   background-color: #ffffff;
-  color: var(--color-primary);
+  color: #0f172a;
   border: 1px solid var(--color-border);
 }
 
 .btn-secondary-hero:hover {
   background-color: var(--color-bg-muted);
-  border-color: var(--color-accent);
-  color: var(--color-accent);
+  border-color: rgb(26, 123, 123);
+  color: rgb(26, 123, 123);
 }
 
-/* Right Media Block */
 .service-hero-right {
   display: flex;
   flex-direction: column;
@@ -241,225 +248,205 @@ body {
   font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 800;
-  color: var(--color-primary);
+  color: #0f172a;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.address-clinic-name svg {
+.address-clinic-name svg,
+.address-details svg,
+.address-phone svg {
   width: 18px;
   height: 18px;
-  color: var(--color-accent);
-}
-
-.address-details {
-  font-size: 0.9rem;
-  color: var(--color-text-body);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.address-details svg {
-  width: 16px;
-  height: 16px;
-  color: var(--color-accent);
+  color: rgb(26, 123, 123);
   flex-shrink: 0;
 }
 
-.address-phone {
+.address-details, .address-phone {
   font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--color-primary);
+  color: #475569;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.address-phone svg {
-  width: 16px;
-  height: 16px;
-  color: var(--color-accent);
-}
-
-/* Feature & Component Grids */
-.editorial-2col-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3.5rem;
-  align-items: center;
-}
-
-.content-box-simple {
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: var(--color-text-body);
-}
-
-.content-box-simple p {
-  margin-bottom: 1rem;
-}
-
-.content-box-simple p:last-child {
-  margin-bottom: 0;
-}
-
-/* Component Cards */
+/* 3-Column Component Cards Grid */
 .component-card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
   margin-top: 2rem;
 }
 
 .component-card {
-  background-color: #ffffff;
+  background: #ffffff;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 1.75rem 1.5rem;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  border-radius: 16px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s ease;
 }
 
 .component-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--color-accent-border);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px -6px rgba(15, 23, 42, 0.1);
+  border-color: #99f6e4;
 }
 
 .component-card-icon {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   border-radius: 12px;
-  background-color: var(--color-accent-light);
-  color: var(--color-accent);
+  background: #f0fdfa;
+  color: rgb(26, 123, 123);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .component-card-icon svg {
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
 }
 
 .component-card h3 {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 0.5rem;
+  color: #0f172a;
+  margin-bottom: 0.6rem;
 }
 
 .component-card p {
   font-size: 0.95rem;
-  color: var(--color-text-muted);
+  color: #475569;
   line-height: 1.6;
 }
 
-/* List with SVG Icons */
-.icon-list-grid {
+/* 2-Column Editorial Grid (Candidacy vs Risks) */
+.editorial-2col-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+@media (max-width: 991px) {
+  .editorial-2col-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Icon Lists */
+.icon-list {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .icon-list-item {
   display: flex;
   align-items: flex-start;
   gap: 0.85rem;
-  background-color: var(--color-bg-muted);
-  padding: 1.15rem 1.25rem;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
+  font-size: 1rem;
+  color: #1e293b;
+  line-height: 1.5;
 }
 
 .icon-list-item svg {
-  width: 20px;
-  height: 20px;
-  color: var(--color-accent);
+  width: 22px;
+  height: 22px;
+  color: rgb(26, 123, 123);
   flex-shrink: 0;
   margin-top: 2px;
 }
 
-.icon-list-item span {
-  font-size: 0.975rem;
-  font-weight: 600;
-  color: var(--color-primary);
-}
-
-/* Process Timeline Step Cards */
-.process-steps-grid {
+/* 5-Step Treatment Process Timeline Cards */
+.process-timeline-wrapper {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.25rem;
-  margin-top: 2.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
 }
 
-.process-step-card {
-  background-color: #ffffff;
+.timeline-step-card {
+  background: #ffffff;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 1.5rem 1.25rem;
-  position: relative;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
+  border-top: 4px solid rgb(26, 123, 123);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s ease;
 }
 
-.step-number-badge {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: var(--color-accent);
-  color: #ffffff;
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 0.95rem;
-  display: flex;
+.timeline-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -6px rgba(26, 123, 123, 0.15);
+}
+
+.step-badge-number {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f0fdfa;
+  color: rgb(26, 123, 123);
+  font-weight: 800;
+  font-size: 1.1rem;
   margin-bottom: 1rem;
+  border: 1px solid #99f6e4;
 }
 
-.process-step-card h3 {
-  font-size: 1.05rem;
+.step-heading {
+  font-size: 1.15rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #0f172a !important;
   margin-bottom: 0.5rem;
 }
 
-.process-step-card p {
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-  line-height: 1.55;
+.step-desc {
+  font-size: 0.925rem;
+  color: #475569;
+  line-height: 1.6;
 }
 
-/* Benefits Grid */
-.benefits-grid {
+/* Benefits Grid 3-Col */
+.benefits-grid-3col {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
   margin-top: 2rem;
 }
 
 .benefit-box {
-  background-color: #ffffff;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  transition: all 0.25s ease;
+}
+
+.benefit-box:hover {
+  border-color: #99f6e4;
+  background: #f0fdfa;
+  transform: translateY(-2px);
 }
 
 .benefit-icon {
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  background-color: var(--color-accent-light);
-  color: var(--color-accent);
+  background: #f0fdfa;
+  color: rgb(26, 123, 123);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -467,199 +454,269 @@ body {
 }
 
 .benefit-icon svg {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
 }
 
 .benefit-text {
   font-size: 0.975rem;
   font-weight: 600;
-  color: var(--color-primary);
-  line-height: 1.5;
+  color: #0f172a;
 }
 
-/* FAQ Accordion */
-.faq-minimal-list {
-  max-width: 860px;
-  margin: 2.5rem auto 0;
-  border-top: 1px solid var(--color-border);
+/* Structured Why Choose Feature Grid */
+.why-choose-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.why-choose-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s ease;
+}
+
+.why-choose-card:hover {
+  transform: translateY(-4px);
+  border-color: #99f6e4;
+  box-shadow: 0 12px 30px -6px rgba(26, 123, 123, 0.12);
+}
+
+.why-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #f0fdfa;
+  color: rgb(26, 123, 123);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.why-card-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.why-choose-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.why-choose-card p {
+  font-size: 0.925rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Structured Aftercare Card Grid */
+.aftercare-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.aftercare-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-top: 3px solid rgb(26, 123, 123);
+  border-radius: 14px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 4px 16px -4px rgba(15, 23, 42, 0.04);
+  transition: all 0.25s ease;
+}
+
+.aftercare-card:hover {
+  transform: translateY(-3px);
+  border-color: #99f6e4;
+  box-shadow: 0 10px 24px -6px rgba(26, 123, 123, 0.12);
+}
+
+.aftercare-card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f0fdfa;
+  color: rgb(26, 123, 123);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.aftercare-card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.aftercare-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+}
+
+.aftercare-card p {
+  font-size: 0.925rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* FAQ Accordion Styling */
+.faq-accordion-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .faq-item-row {
-  border-bottom: 1px solid var(--color-border);
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
 }
 
 .faq-question-btn {
   width: 100%;
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
   background: none;
   border: none;
-  padding: 1.35rem 0.5rem;
-  font-family: var(--font-heading);
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--color-primary);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  color: #0f172a;
+  text-align: left;
   cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.faq-question-btn:hover {
-  color: var(--color-accent);
 }
 
 .faq-icon-toggle {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  background-color: var(--color-bg-muted);
-  color: var(--color-primary);
+  background: #f1f5f9;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-  flex-shrink: 0;
+  color: #0f172a;
+  transition: transform 0.3s ease;
 }
 
 .faq-icon-toggle svg {
-  width: 14px;
-  height: 14px;
-}
-
-.faq-item-row.active .faq-icon-toggle {
-  transform: rotate(180deg);
-  background-color: var(--color-accent);
-  color: #ffffff;
+  width: 16px;
+  height: 16px;
 }
 
 .faq-answer-body {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.35s ease;
-  padding: 0 0.5rem;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1.5rem;
+}
+
+.faq-answer-body p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
 }
 
 .faq-item-row.active .faq-answer-body {
   max-height: 300px;
-  padding-bottom: 1.35rem;
+  padding: 0 1.5rem 1.25rem 1.5rem;
 }
 
-.faq-answer-body p {
-  font-size: 0.975rem;
-  line-height: 1.65;
-  color: var(--color-text-body);
+.faq-item-row.active .faq-icon-toggle {
+  transform: rotate(180deg);
+  background: #f0fdfa;
+  color: rgb(26, 123, 123);
 }
 
-/* Related Treatments Navigation Grid */
-.related-treatments-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-  margin-top: 2rem;
-}
-
-.related-treatment-card {
+/* Final CTA Section */
+.cta-section {
+  padding: 3.5rem 0;
   background-color: #ffffff;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 1.5rem 1.25rem;
+}
+
+.cta-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);
+  border: 1px solid #99f6e4;
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  text-decoration: none;
-  color: var(--color-primary);
-  font-family: var(--font-heading);
-  font-size: 0.975rem;
-  font-weight: 700;
-  transition: all 0.25s ease;
+  gap: 2rem;
+  box-shadow: 0 10px 30px -5px rgba(26, 123, 123, 0.1);
+
 }
 
-.related-treatment-card:hover {
-  border-color: var(--color-accent-border);
-  background-color: var(--color-accent-light);
-  color: var(--color-accent);
-  transform: translateY(-2px);
-}
-
-.related-treatment-card svg {
-  width: 18px;
-  height: 18px;
-  color: var(--color-accent);
-  transition: transform 0.25s ease;
-}
-
-.related-treatment-card:hover svg {
-  transform: translateX(4px);
-}
-
-/* Final CTA Panel */
-.final-cta-card-panel {
-  color: var(--color-text-body);
-  text-align: center;
-  position: relative;
-  max-width: 860px;
-  margin: 0 auto;
-}
-
-.final-cta-inner-content h2 {
-  font-family: var(--font-heading);
-  font-size: 1.85rem;
-  font-weight: 800;
-  color: var(--color-primary);
-  margin-bottom: 0.75rem;
-}
-
-.final-cta-inner-content p {
-  font-size: 1.05rem;
-  color: var(--color-text-muted);
-  margin-bottom: 1.75rem;
-}
-
-/* Responsive Media Queries */
-@media (max-width: 1024px) {
-  .process-steps-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .related-treatments-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 767px) {
-  .service-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 2.25rem;
-  }
-  
-  .service-hero-h1 {
-    font-size: clamp(1.75rem, 6.5vw, 2.25rem) !important;
+@media (max-width: 768px) {
+  .cta-card {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
     text-align: center;
   }
-  
-  .service-hero-p {
-    text-align: center !important;
-    font-size: 1rem !important;
-  }
+}
 
-  .hero-cta-group {
-    flex-direction: column;
-    width: 100%;
-  }
+.cta-logo {
+  width: 54px;
+  height: 54px;
+  color: rgb(26, 123, 123);
+  flex-shrink: 0;
+}
 
-  .btn-hero {
-    width: 100%;
-    justify-content: center;
-  }
+.cta-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
 
-  .editorial-2col-grid,
-  .component-card-grid,
-  .icon-list-grid,
-  .process-steps-grid,
-  .benefits-grid,
-  .related-treatments-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
+.cta-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+}
+
+.cta-desc {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  background-color: rgb(26, 123, 123);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px -4px rgba(26, 123, 123, 0.3);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn-cta:hover {
+  background-color: rgb(20, 95, 95);
+  transform: translateY(-2px);
 }
