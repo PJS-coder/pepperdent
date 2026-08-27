@@ -87,7 +87,8 @@ function updateActiveNav(targetKey) {
             (targetKey === 'about' && (href.includes('about.html') || href === '#about')) ||
             (targetKey === 'contact.html' && href.includes('contact.html')) ||
             (targetKey === 'services.html' && href.includes('services.html')) ||
-            (targetKey === 'about.html' && href.includes('about.html'))
+            (targetKey === 'about.html' && href.includes('about.html')) ||
+            (targetKey === 'kamla-nagar' && href.includes('dental-clinic-in-kamla-nagar'))
         ) {
             link.classList.add('active');
         }
@@ -102,7 +103,8 @@ function updateActiveNav(targetKey) {
             (targetKey === 'about' && (href.includes('about.html') || href === '#about')) ||
             (targetKey === 'contact.html' && href.includes('contact.html')) ||
             (targetKey === 'services.html' && href.includes('services.html')) ||
-            (targetKey === 'about.html' && href.includes('about.html'))
+            (targetKey === 'about.html' && href.includes('about.html')) ||
+            (targetKey === 'kamla-nagar' && href.includes('dental-clinic-in-kamla-nagar'))
         ) {
             link.classList.add('active');
         }
@@ -113,6 +115,10 @@ function highlightNavLink() {
     const path = window.location.pathname;
     
     // Page checks for multi-page routing
+    if (path.includes('dental-clinic-in-kamla-nagar')) {
+        updateActiveNav('kamla-nagar');
+        return;
+    }
     if (path.includes('about.html')) {
         updateActiveNav('about.html');
         return;
