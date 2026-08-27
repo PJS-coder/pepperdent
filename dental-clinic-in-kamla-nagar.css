@@ -1438,14 +1438,38 @@ body {
     border-radius: 16px;
   }
 
-  /* Services Grid Mobile */
+  /* Services Grid Mobile - 2 Boxes in One Line */
   .services-grid-editorial {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
   }
 
   .service-thumb {
-    height: 190px;
+    height: 125px !important;
+  }
+
+  .service-body {
+    padding: 0.85rem 0.65rem !important;
+  }
+
+  .service-body h3 {
+    font-size: 0.925rem !important;
+    margin-bottom: 0.35rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .service-body p {
+    font-size: 0.75rem !important;
+    line-height: 1.35 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .service-body .service-link {
+    font-size: 0.75rem !important;
+    margin-top: 0.5rem !important;
   }
 
   /* Why Features Mobile */
