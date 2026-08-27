@@ -124,10 +124,12 @@ function highlightNavLink() {
         return;
     }
     if (
+        path.includes('/services/') ||
         path.includes('services.html') ||
         path.includes('dental-implants') ||
         path.includes('root-canal-treatment') ||
         path.includes('crowns-bridges') ||
+        path.includes('teeth-braces') ||
         path.includes('braces-orthodontics') ||
         path.includes('clear-aligners') ||
         path.includes('teeth-whitening') ||
@@ -136,7 +138,9 @@ function highlightNavLink() {
         path.includes('mouth-ulcers') ||
         path.includes('laser-dentistry') ||
         path.includes('wisdom-teeth') ||
-        path.includes('gum-treatment')
+        path.includes('gum-treatment') ||
+        path.includes('restorative-dentistry') ||
+        path.includes('cosmetic-dentistry')
     ) {
         updateActiveNav('services.html');
         return;
