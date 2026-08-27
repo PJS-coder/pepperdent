@@ -1,10 +1,10 @@
 /* Pepper Dent - Dental Clinic in Kamla Nagar - Architectural Editorial Design System */
 
 :root {
-  --color-primary: rgb(26, 123, 123);
-  --color-primary-glow: rgb(34, 150, 150);
-  --color-primary-dark: rgb(20, 95, 95);
-  --color-primary-light: #f0fdfa;
+  --color-primary: #0f172a;
+  --color-primary-glow: #1e293b;
+  --color-primary-dark: #090d16;
+  --color-primary-light: #f8fafc;
   --color-accent: rgb(26, 123, 123);
   --color-accent-hover: rgb(20, 95, 95);
   --color-accent-light: #f0fdfa;
@@ -13,7 +13,7 @@
   --color-bg-white: #ffffff;
   --color-bg-muted: #f8fafc;
   --color-text-dark: #0f172a;
-  --color-text-body: #334155;
+  --color-text-body: #1e293b;
   --color-text-muted: #64748b;
   --color-border: #e2e8f0;
   --color-border-subtle: #f1f5f9;
