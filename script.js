@@ -175,7 +175,7 @@ function highlightNavLink() {
 
 // Initialize active state on load
 highlightNavLink();
-window.addEventListener('scroll', highlightNavLink);
+window.addEventListener('scroll', highlightNavLink, { passive: true });
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

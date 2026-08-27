@@ -17,6 +17,10 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../images/favicon.png">
+
+    <!-- Performance Preloads -->
+    <link rel="preload" href="../styles.css?v=2" as="style">
+    <link rel="preload" href="../images/pepperdent-logo.webp" as="image" type="image/webp">
 </head>
 <body>
 
@@ -24,7 +28,7 @@
     <header class="header" id="header">
         <nav class="nav">
             <a href="../index.html" class="logo">
-                <img src="../images/pepperdent-logo.webp" alt="PepperDent Dental Clinic Logo" class="logo-img" fetchpriority="high">
+                <img decoding="async" src="../images/pepperdent-logo.webp" alt="PepperDent Dental Clinic Logo" class="logo-img" fetchpriority="high">
             </a>
             <ul class="nav-links">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
@@ -80,7 +84,7 @@
                     </div>
                     <div class="service-hero-right">
                         <div class="right-hero-media-wrapper">
-                            <img src="../images/cosmetic-dentistry.webp" alt="Safe & Instant Laser Whitening at Pepper Dent" width="600" height="375" fetchpriority="high">
+                            <img decoding="async" src="../images/cosmetic-dentistry.webp" alt="Safe & Instant Laser Whitening at Pepper Dent" width="600" height="375" fetchpriority="high">
                         </div>
                         <div class="simple-hero-address-card">
                             <div class="address-clinic-name">
@@ -374,21 +378,21 @@
                 <div class="component-card-grid" style="margin-top: 2rem;">
                     <a href="dental-implants.html" style="text-decoration: none; color: inherit;">
                         <div class="component-card" style="cursor: pointer; transition: transform 0.2s;">
-                            <img src="../images/srv-dental-implant.webp" alt="Dental Implants" style="width: 100%; height: 160px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem;">
+                            <img decoding="async" src="../images/srv-dental-implant.webp" alt="Dental Implants" style="width: 100%; height: 160px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem;">
                             <h3>Dental Implants</h3>
                             <p>Permanent artificial tooth roots for long-term tooth replacement.</p>
                         </div>
                     </a>
                     <a href="root-canal-treatment.html" style="text-decoration: none; color: inherit;">
                         <div class="component-card" style="cursor: pointer; transition: transform 0.2s;">
-                            <img src="../images/srv-root-canal.webp" alt="Root Canal Treatment" style="width: 100%; height: 160px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem;">
+                            <img decoding="async" src="../images/srv-root-canal.webp" alt="Root Canal Treatment" style="width: 100%; height: 160px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem;">
                             <h3>Root Canal Treatment</h3>
                             <p>Painless endodontic care to clear infection and save your natural tooth.</p>
                         </div>
                     </a>
                     <a href="crowns-bridges.html" style="text-decoration: none; color: inherit;">
                         <div class="component-card" style="cursor: pointer; transition: transform 0.2s;">
-                            <img src="../images/srv-dental-crowns.webp" alt="Crowns & Bridges" style="width: 100%; height: 160px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem;">
+                            <img decoding="async" src="../images/srv-dental-crowns.webp" alt="Crowns & Bridges" style="width: 100%; height: 160px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem;">
                             <h3>Dental Crowns & Bridges</h3>
                             <p>Custom Zirconia caps to restore broken teeth and fill gaps.</p>
                         </div>
@@ -422,7 +426,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="../index.html" class="footer-logo">
-                        <img src="../images/pepperdent-logo.webp" alt="PepperDent Logo" class="footer-logo-img" loading="lazy">
+                        <img decoding="async" src="../images/pepperdent-logo.webp" alt="PepperDent Logo" class="footer-logo-img" loading="lazy">
                     </a>
                     <p class="footer-desc">Creating confident smiles everyday with advanced digital technology and compassionate care.</p>
                 </div>

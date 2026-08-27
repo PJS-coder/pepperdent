@@ -1,3 +1,26 @@
+
+/* Ultra-Smooth Scrolling & Performance Optimizations */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  content-visibility: auto;
+}
+
+.gmb-gallery-track,
+.service-card,
+.component-card,
+.timeline-step-card,
+.aftercare-card,
+.why-choose-card {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
 /* Reset and Base Styles */
 * {
     margin: 0;
