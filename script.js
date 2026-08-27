@@ -123,7 +123,17 @@ function highlightNavLink() {
         updateActiveNav('about.html');
         return;
     }
-    if (path.includes('services.html')) {
+    if (
+        path.includes('services.html') ||
+        path.includes('dental-implants') ||
+        path.includes('root-canal-treatment') ||
+        path.includes('crowns-bridges') ||
+        path.includes('braces-orthodontics') ||
+        path.includes('clear-aligners') ||
+        path.includes('teeth-whitening') ||
+        path.includes('teeth-cleaning') ||
+        path.includes('pediatric-dentistry')
+    ) {
         updateActiveNav('services.html');
         return;
     }
