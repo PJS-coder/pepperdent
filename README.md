@@ -1,6 +1,6 @@
-# PepperDent Dental Website - HTML/CSS/JS Version
+# Pepper Dent Dental Website - HTML/CSS/JS Version
 
-This is a pure HTML, CSS, and JavaScript version of the PepperDent Dental website, converted from the Next.js React version.
+This is a pure HTML, CSS, and JavaScript version of the Pepper Dent Dental website, converted from the Next.js React version.
 
 ## 📁 Project Structure
 
@@ -134,4 +134,4 @@ Update the contact details in the Contact section and Footer:
 
 **Created:** 2026  
 **Version:** 1.0.0  
-**License:** All rights reserved - PepperDent Dental
+**License:** All rights reserved - Pepper Dent Dental

@@ -2,16 +2,21 @@
   RewriteEngine On
   RewriteBase /
 
-  # Redirect external requests with .html extension to clean URL (e.g. /about.html -> /about)
+  # 1. Strip trailing slashes from URLs unless it's a real directory
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} (.+)/$
+  RewriteRule ^ %1 [R=301,L]
+
+  # 2. Redirect external requests with .html extension to clean URL (e.g. /about.html -> /about)
   RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
   RewriteRule ^ /%1 [R=301,L]
 
-  # Resolve clean URLs to .html files internally (e.g. /about serves about.html)
+  # 3. Resolve clean URLs to .html files internally (e.g. /about serves about.html)
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}\.html -f
   RewriteRule ^(.*)$ $1.html [L]
 
-  # Resolve subfolder clean URLs internally (e.g. /services/dental-implants serves services/dental-implants.html)
+  # 4. Resolve subfolder clean URLs internally (e.g. /services/dental-implants serves services/dental-implants.html)
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^(.*)$ $1.html [L]
